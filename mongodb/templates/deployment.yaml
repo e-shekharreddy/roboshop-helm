@@ -9,7 +9,7 @@ metadata:
     tier: db
     component: mongodb
 spec:
-  replicas: {{ .Values.deployment.replicas}}
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     # by using these lables replica set select the pod
     matchLabels:
@@ -26,5 +26,5 @@ spec:
     spec:
       containers:
       - name: mongodb
-        image: "{{ .Values.deployment.imageName }}:{{ .values.deployment.imageVersion }}"
+        image: "{{ .Values.deployment.imageName }}:{{ .Values.deployment.imageVersion }}"
 
